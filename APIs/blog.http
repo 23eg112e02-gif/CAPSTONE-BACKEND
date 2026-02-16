@@ -1,0 +1,74 @@
+### User Register
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "firstName":"mythli",
+    "lastName":"doma",
+    "email":"myth@gmail.com",
+    "password":"myth",
+    "profileImageUrl":"https://example.com/avatars/user.png"
+}
+
+###register author
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+    "firstName":"kiran1",
+    "lastName":"ande1",
+    "email":"kiran1@gmail.com",
+    "password":"uday123",
+    "profileImageUrl":"https://example.com/avatars/user.png"
+}
+
+###authenticate user
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"admin"
+}
+
+### create article
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"698abbff174aefb8574fc6db",
+    "title":"test2 article",
+    "category":"Programming",
+    "content":"PYTHON Is a programming language"
+}
+
+###get the articles
+GET http://localhost:4000/author-api/articles/698abbff174aefb8574fc6db
+
+### update article
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "author":"69896d4de880bd698fa3b2ce",
+    "articleId":"69897d09f78e193dc2569d5a",
+    "title":"test1 article",
+    "category":"programming",
+    "content":"java is the most used programming lang"
+}
+
+###delete the article
+
+###logout
+GET http://localhost:4000/common-api/logout
+
+###test request
+GET http://localhost:4000/test
+
+###read the articles
+GET http://localhost:4000/admin-api/read
+### block
+PUT http://localhost:4000/admin-api/block/698abbde174aefb8574fc6d9
+
+### activate
+PUT http://localhost:4000/admin-api/active/698abbde174aefb8574fc6d9
